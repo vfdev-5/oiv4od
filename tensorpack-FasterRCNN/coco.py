@@ -25,6 +25,10 @@ class _COCOMeta(object):
     INSTANCE_TO_BASEDIR = {
         'train': 'train',
         'val': 'val',
+        'val_0.1': 'val',
+        'val_0.3': 'val',
+        'val_0.7': 'val',
+        'val_0.9': 'val',
         'test': 'test'
     }
 

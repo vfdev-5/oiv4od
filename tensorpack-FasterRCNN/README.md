@@ -48,3 +48,11 @@ Evaluate the performance of a model on OpenImages, and save results to json.
     --config MODE_MASK=True DATA.BASEDIR=/path/to/OpenImages/DIR
 ```
 Evaluation or prediction will need the same config used during training.
+
+
+## TODO:
+
+- Setup Train/Val datasets:
+    - Train = test + 70% val
+    - Val = 30% val
+- Crash on validation

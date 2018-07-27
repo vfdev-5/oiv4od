@@ -54,8 +54,8 @@ _C.MODE_FPN = False
 
 # dataset -----------------------
 _C.DATA.BASEDIR = '.'
-_C.DATA.TRAIN = ['test', ]
-_C.DATA.VAL = 'val'   # For now, only support evaluation on single dataset
+_C.DATA.TRAIN = ['test', 'val_0.7']
+_C.DATA.VAL = 'val_0.3'   # For now, only support evaluation on single dataset
 _C.DATA.NUM_CATEGORY = 601
 _C.DATA.CLASS_NAMES = []  # NUM_CLASS strings. Needs to be populated later by data loader
 
@@ -80,6 +80,7 @@ _C.BACKBONE.STRIDE_1X1 = False  # True for MSRA models
 _C.TRAIN.NUM_GPUS = None         # by default, will be set from code
 _C.TRAIN.WEIGHT_DECAY = 1e-4
 _C.TRAIN.BASE_LR = 1e-2
+_C.TRAIN.GAMMA = 0.1
 _C.TRAIN.WARMUP = 1000    # in steps
 _C.TRAIN.STEPS_PER_EPOCH = 500
 # LR_SCHEDULE = [120000, 160000, 180000]  # "1x" schedule in detectron

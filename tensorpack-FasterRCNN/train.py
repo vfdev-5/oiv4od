@@ -572,7 +572,7 @@ if __name__ == '__main__':
         warmup_end_epoch = cfg.TRAIN.WARMUP * factor * 1. / stepnum
         lr_schedule = [(int(np.ceil(warmup_end_epoch)), warmup_schedule[-1][1])]
         for idx, steps in enumerate(cfg.TRAIN.LR_SCHEDULE[:-1]):
-            mult = 0.1 ** (idx + 1)
+            mult = cfg.TRAIN.GAMMA ** (idx + 1)
             lr_schedule.append(
                 (steps * factor // stepnum, cfg.TRAIN.BASE_LR * mult))
         logger.info("Warm Up Schedule (steps, value): " + str(warmup_schedule))

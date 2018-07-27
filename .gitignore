@@ -17,6 +17,10 @@ labels.txt*
 *.npz
 *.pth
 
+*.pkl
+.ipynb_checkpoints
+detectron/detectron/datasets/data/
+
 *.spyproject
 *.txt
 *.cmd
