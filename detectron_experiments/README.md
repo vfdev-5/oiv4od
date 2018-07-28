@@ -31,12 +31,33 @@ def _operators_to_graph_def(ops,
 #### Install protoc3
 https://gist.github.com/SofyanHadiA/37787e5ed098c97919b8c593f0ec44d8
 
-Run `python setup.py install`
+```
+# Make sure you grab the latest version
+curl -OL https://github.com/google/protobuf/releases/download/v3.2.0/protoc-3.2.0-linux-x86_64.zip
+
+# Unzip
+unzip protoc-3.2.0-linux-x86_64.zip -d protoc3
+
+# Move protoc to /usr/local/bin/
+sudo mv protoc3/bin/* /usr/local/bin/
+
+# Move protoc3/include to /usr/local/include/
+sudo mv protoc3/include/* /usr/local/include/
+```
+
+Run `make`
 
 ## Setup dataset
 
-Following detectron's recommendation xview tiles dataset in MSCoco format is need to be put (we use symlinks) into
-`detectron/detectron/datasets/data`
+Run cells from `notebooks/convert_to_mscoco_format.ipynb` to convert dataset into MSCoco format
+
+## Download weights
+
+Download weights from [model zoo](https://github.com/facebookresearch/Detectron/blob/master/MODEL_ZOO.md#end-to-end-faster--mask-r-cnn-baselines)
+
+```
+wget https://s3-us-west-2.amazonaws.com/detectron/35858015/12_2017_baselines/e2e_faster_rcnn_X-101-64x4d-FPN_1x.yaml.01_40_54.1xc565DE/output/train/coco_2014_train%3Acoco_2014_valminusminival/generalized_rcnn/model_final.pkl
+```
 
 ## How to train and predict
 
