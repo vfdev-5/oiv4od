@@ -2,7 +2,7 @@
 
 container_name="detectron"
 image_name=detectron
-image_version=latest
+image_version=oiv4
 
 echo "Run iteractive terminal from docker image '${image_name}'"
 
