@@ -43,11 +43,23 @@ _DATASETS = {
         _ANN_FN:
             _DATA_DIR + '/as_mscoco/annotations/train_overfit.json'
     },
-    'open_images_v4_train_small': {
+    'open_images_v4_train_500k': {
+        _IM_DIR:
+            _DATA_DIR + '/as_mscoco/train',
+        _ANN_FN:
+            _DATA_DIR + '/as_mscoco/annotations/train_500k.json'
+    },
+    'open_images_v4_test': {
         _IM_DIR:
             _DATA_DIR + '/as_mscoco/test',
         _ANN_FN:
             _DATA_DIR + '/as_mscoco/annotations/test.json'
+    },
+    'open_images_v4_val': {
+        _IM_DIR:
+            _DATA_DIR + '/as_mscoco/val',
+        _ANN_FN:
+            _DATA_DIR + '/as_mscoco/annotations/val.json'
     },
     'open_images_v4_val_0.1': {
         _IM_DIR:
@@ -61,12 +73,12 @@ _DATASETS = {
         _ANN_FN:
             _DATA_DIR + '/as_mscoco/annotations/val_0.9.json'
     },
-    'open_images_v4_test': {
-        _IM_DIR:
-            _DATA_DIR + '/as_mscoco/test_challenge',
-        _ANN_FN:
-            _DATA_DIR + '/as_mscoco/annotations/test_challenge.json'
-    },
+    # 'open_images_v4_test': {
+    #     _IM_DIR:
+    #         _DATA_DIR + '/as_mscoco/test_challenge',
+    #     _ANN_FN:
+    #         _DATA_DIR + '/as_mscoco/annotations/test_challenge.json'
+    # },
 }
 
 

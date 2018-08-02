@@ -30,7 +30,8 @@ TRAIN:
   FREEZE_CONV_BODY: True
   CROWD_FILTER_THRESH: 0.5
   WEIGHTS: .
-  DATASETS: ('open_images_v4_train_500k', )
+  # DATASETS: ('open_images_v4_train_small', 'open_images_v4_val_0.9')
+  DATASETS: ('open_images_v4_test', )
   SCALES: (800,)
   MAX_SIZE: 1333
   IMS_PER_BATCH: 1
