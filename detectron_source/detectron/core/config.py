@@ -63,6 +63,8 @@ __C = AttrDict()
 cfg = __C
 
 
+__C.DEBUG = False
+
 # Random note: avoid using '.ON' as a config key since yaml converts it to True;
 # prefer 'ENABLED' instead
 

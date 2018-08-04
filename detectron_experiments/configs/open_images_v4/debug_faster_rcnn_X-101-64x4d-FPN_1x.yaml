@@ -1,7 +1,7 @@
 MODEL:
   TYPE: generalized_rcnn
   CONV_BODY: FPN.add_fpn_ResNet101_conv5_body
-  NUM_CLASSES: 601
+  NUM_CLASSES: 602
   FASTER_RCNN: True
 NUM_GPUS: 8
 SOLVER:

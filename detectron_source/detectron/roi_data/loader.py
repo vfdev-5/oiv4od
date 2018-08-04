@@ -132,6 +132,9 @@ class RoIDataLoader(object):
             db_inds = self._get_next_minibatch_inds()
             minibatch_db = [self._roidb[i] for i in db_inds]
             blobs, valid = get_minibatch(minibatch_db)
+
+        # if cfg.DEBUG:
+        #     print("RoiDataLoader DEBUG: roidb\n{}".format(blobs['roidb']))
         return blobs
 
     def _shuffle_roidb_inds(self):
