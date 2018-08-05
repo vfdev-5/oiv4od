@@ -27,8 +27,9 @@ RUN apt-get install -y --no-install-recommends \
 	python3-pip \
 	graphviz \
 	git \
-    p7zip-full \
-	cmake
+        p7zip-full \
+        tmux \
+        htop
 
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
@@ -75,7 +76,7 @@ RUN pip3 --no-cache-dir install --upgrade torchvision \
 ENV LD_LIBRARY_PATH /usr/local/cuda/extras/CUPTI/lib64:$LD_LIBRARY_PATH
 
 RUN apt-get update && apt-get install -y --no-install-recommends zlib1g-dev libjpeg-dev
-RUN CC="cc -mavx2" pip3 install --no-cache-dir pillow-simd
+RUN pip3 uninstall -y pillow && CC="cc -mavx2" pip3 install -U --force-reinstall pillow-simd
 
 
 RUN jupyter nbextension enable --py --sys-prefix widgetsnbextension
