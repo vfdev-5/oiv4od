@@ -58,18 +58,23 @@ RUN pip3 install --no-cache-dir \
 	graphviz \
 	joblib \
     jupyterlab \
-    kaggle
+    kaggle \
+    PyYAML \
+    packaging \
+    image-dataset-viz
 
+RUN pip3 --no-cache-dir install pycocotools
 
 # Install pytorch and torch vision
 RUN pip3 --no-cache-dir install --upgrade \
-	http://download.pytorch.org/whl/cu92/torch-0.4.1-cp35-cp35m-linux_x86_64.whl
+	http://download.pytorch.org/whl/cu92/torch-0.4.1-cp35-cp35m-linux_x86_64.whl cffi
 
 
 RUN pip3 --no-cache-dir install --upgrade torchvision \
 	visdom \
 	git+https://github.com/lanpa/tensorboard-pytorch \
-	tensorboard
+	tensorboard \
+        tensorflow
 
 
 # For CUDA profiling, TensorFlow requires CUPTI.
