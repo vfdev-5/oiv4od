@@ -1,4 +1,5 @@
 MODEL:
+  NUM_CLASSES: 602 
   TYPE: generalized_rcnn
   CONV_BODY: FPN.fpn_ResNet101_conv5_body
   FASTER_RCNN: True
